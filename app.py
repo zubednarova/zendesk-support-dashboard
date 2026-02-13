@@ -1,14 +1,20 @@
+#!/usr/bin/env python3
 import subprocess
-import os
+import sys
 
-print("Starting build process...")
+print("Building React app...")
 
-# Install dependencies
-print("Running npm install...")
-subprocess.run(['npm', 'install'], check=True, cwd='/app')
-
-# Build the app
-print("Running npm build...")
-subprocess.run(['npm', 'run', 'build'], check=True, cwd='/app')
-
-print("Build completed successfully!")
+try:
+    # Install dependencies
+    print("Installing npm dependencies...")
+    subprocess.check_call(["npm", "install"])
+    
+    # Build the app
+    print("Running npm build...")
+    subprocess.check_call(["npm", "run", "build"])
+    
+    print("Build completed successfully!")
+    
+except subprocess.CalledProcessError as e:
+    print(f"Build failed: {e}")
+    sys.exit(1)
