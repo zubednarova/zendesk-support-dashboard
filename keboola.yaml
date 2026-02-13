@@ -1,1 +1,2 @@
-type: dockerfile
+type: python
+entrypoint: app.py
