@@ -1,1 +1,2 @@
 pythonEntrypoint: app.py
+nodejsEntrypoint: src/index.js
