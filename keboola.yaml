@@ -1,2 +1,1 @@
-type: python
-entrypoint: app.py
+entrypoint: python app.py
