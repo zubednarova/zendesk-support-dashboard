@@ -1,1 +1,2 @@
-pythonEntrypoint: python app.py
+parameters:
+  pythonEntrypoint: app.py
