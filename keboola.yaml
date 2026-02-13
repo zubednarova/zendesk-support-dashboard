@@ -1,1 +1,1 @@
-entrypoint: python app.py
+pythonEntrypoint: app.py
