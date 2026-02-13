@@ -1,6 +1,1 @@
-type: dockerhub
-uri: node:18-alpine
-entrypoint: |
-  npm install
-  npm run build
-  npx serve -s build -l 8000
+type: dockerfile
